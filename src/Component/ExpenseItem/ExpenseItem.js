@@ -1,17 +1,11 @@
 import React from "react";
+import ExpensesDate from "../ExpensesDate/ExpensesDate";
 import "./ExpenseItem.css";
 
 const ExpenseItem = (props) => {
-  const day = props.date.toLocaleString("en-US", { day: "2-digit" });
-  const month = props.date.toLocaleString("en-US", { month: "long" });
-  const year = props.date.getFullYear();
   return (
     <div className="expense-item">
-      <div>
-        <div>{day}</div>
-        <div>{month}</div>
-        <div>{year}</div>
-      </div>
+      <ExpensesDate date={props.date} />
       {/* <div>{props.date.toISOString()}</div> */}
       <div className="expense-item__description">
         <h2>{props.title}</h2>
