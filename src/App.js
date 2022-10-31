@@ -24,13 +24,18 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const addExpenseHandler = (expense) => {
+    console.log("in app.js");
+    console.log(expense);
+  };
+
   return (
     <div>
       <h1 style={{ textAlign: "center", color: "white" }}>Expense details</h1>
-      <InputExpenses />
+      <InputExpenses onAddExpense={addExpenseHandler} />
       <Expenses item={expenses} />
     </div>
   );
 }
-
 export default App;
