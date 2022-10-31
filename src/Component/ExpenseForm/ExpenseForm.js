@@ -2,43 +2,55 @@ import React, { useState } from "react";
 import "./ExpenseForm.css";
 
 const ExpenseForm = () => {
-  //   const [enterTitle, setEnterTitle] = useState("");
-  //   const [enterAmount, setEnterAmount] = useState("");
-  //   const [enterDate, setEnterDate] = useState("");
+  const [enterTitle, setEnterTitle] = useState("");
+  const [enterAmount, setEnterAmount] = useState("");
+  const [enterDate, setEnterDate] = useState("");
 
-  const [userInput, setUserInput] = useState({
-    enterTitle: "",
-    enterAmount: "",
-    enterDate: "",
-  });
+  //   const [userInput, setUserInput] = useState({
+  //     enterTitle: "",
+  //     enterAmount: "",
+  //     enterDate: "",
+  //   });
 
   const titleChangeHandler = (e) => {
-    //   setEnterTitle(e.target.value);
+    setEnterTitle(e.target.value);
     // setUserInput({
     //   ...userInput,
     //   enterTitle: e.target.value,
     // });
-    setUserInput((prevState) => {
-      return { ...prevState, enteredTitle: e.target.value };
-    });
+    // setUserInput((prevState) => {
+    //   return { ...prevState, enteredTitle: e.target.value };
+    // });
   };
   const amountChangeHandler = (e) => {
-    //   setEnterAmount(e.target.value);
-    setUserInput({
-      ...userInput,
-      enterAmount: e.target.value,
-    });
+    setEnterAmount(e.target.value);
+    // setUserInput({
+    //   ...userInput,
+    //   enterAmount: e.target.value,
+    // });
   };
   const dateChangeHandler = (e) => {
-    // setEnterDate(e.target.value);
-    setUserInput({
-      ...userInput,
-      enterDate: e.target.value,
-    });
+    setEnterDate(e.target.value);
+    // setUserInput({
+    //   ...userInput,
+    //   enterDate: e.target.value,
+    // });
+  };
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    const expenseData = {
+      title: enterTitle,
+      amount: enterAmount,
+      date: new Date(enterDate),
+    };
+
+    console.log(expenseData);
   };
 
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
