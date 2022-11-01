@@ -3,10 +3,6 @@ import ExpenseForm from "../ExpenseForm/ExpenseForm";
 import "./InputExpenses.css";
 
 const InputExpenses = (props) => {
-  console.log(
-    "🚀 ~ file: InputExpenses.js ~ line 6 ~ InputExpenses ~ props",
-    props
-  );
   const saveExpenseData = (enterExpenseData) => {
     const expenseData = {
       ...enterExpenseData,

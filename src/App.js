@@ -34,11 +34,6 @@ function App() {
     console.log("in app.js");
     console.log(expense);
   };
-  console.log(
-    "🚀 ~ file: App.js ~ line 37 ~ addExpenseHandler ~ addExpenseHandler",
-    addExpenseHandler
-  );
-
   return (
     <div>
       <h1 style={{ textAlign: "center", color: "white" }}>Expense details</h1>

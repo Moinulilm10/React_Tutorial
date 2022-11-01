@@ -2,10 +2,6 @@ import React, { useState } from "react";
 import "./ExpenseForm.css";
 
 const ExpenseForm = (props) => {
-  console.log(
-    "🚀 ~ file: ExpenseForm.js ~ line 5 ~ ExpenseForm ~ props",
-    props
-  );
   const [enterTitle, setEnterTitle] = useState("");
   const [enterAmount, setEnterAmount] = useState("");
   const [enterDate, setEnterDate] = useState("");
